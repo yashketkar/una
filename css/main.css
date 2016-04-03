@@ -1087,3 +1087,12 @@ ul.faq li > div h3 {
   margin-top: 150px;
   margin-bottom: 150px;
 }
+
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}

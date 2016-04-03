@@ -1,5 +1,14 @@
 jQuery(function($) {
 
+	//clients slider
+	$('#myCarousel').carousel({
+	interval: 3000
+	})
+
+	$('#myCarousel').on('slid.bs.carousel', function() {
+		//alert("slid");
+	});
+
 	//#main-slider
 	$(function(){
 		$('#main-slider.carousel').carousel({
