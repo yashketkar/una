@@ -47,13 +47,24 @@ jQuery(function($) {
 
 	//contact form
 	var form = $('.contact-form');
-	form.submit(function () {
+	/*form.submit(function () {
 		$this = $(this);
 		$.post($(this).attr('action'), function(data) {
 			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
 		},'json');
 		return false;
 	});
+	*/
+	form.submit(function () {'use strict',
+    $this = $(this);
+    $.post("sendemail.php", $(".contact-form").serialize(),function(result){
+        if(result.type == 'success'){
+            $this.prev().text(result.message).fadeIn().delay(3000).fadeOut();
+        }
+    });
+    return false;
+	});
+	
 
 	//goto top
 	$('.gototop').click(function(event) {
