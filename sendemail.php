@@ -12,7 +12,7 @@
     $subject = "New message from " . $fname ." " . $lname;
     $message = @trim(stripslashes($_POST['message']));
     $email_from = $email;
-    $email_to = 'yketkar@indiana.edu';
+    $email_to = 'una@indiana.edu';
 
     $body = 'First Name: ' . $fname . "\n\n" . 'Last Name: ' . $lname . "\n\n" . 'Email: ' . $email . "\n\n" . 'Message:' . "\n\n" . $message;
 
